@@ -13,7 +13,7 @@ RUN wget -q https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz
 RUN mkdir -p /usr/local/bin
 RUN tar xf go1.14.2.linux-amd64.tar.gz -C /usr/local
 RUN ln -s /usr/local/go/bin/* /usr/local/bin
-RUN git clone https://github.com/owncloud/ocis.git
+RUN git clone https://github.com/ishank011/ocis.git
 RUN cd ocis && git checkout ${BRANCH}
 RUN cd ocis && git log -n 1
 RUN cd ocis && go build -v -o bin/ocis -toolexec '/usr/bin/time -v' ./cmd/ocis
